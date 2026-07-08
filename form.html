@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+</head>
+<body>
+  <section class="contacto">
+    <h1>Formulario de Contacto</h1>
+    <form action="http://localhost:3000/guardar" method="POST" class="formulario">
+      
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="btn enviar">✉ Enviar</button>
+        <button type="reset" class="btn limpiar">🗑 Limpiar</button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
+
+<style>
+  /* Fondo general */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  margin: 0;
+  padding: 40px;
+}
+
+/* Contenedor principal */
+.contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Título */
+.contacto h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Campos */
+.formulario .campo {
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al escribir */
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25,118,210,.3);
+  outline: none;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn.enviar {
+  background: #1976d2;
+  color: white;
+}
+
+.btn.limpiar {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+</style>
