@@ -7,7 +7,8 @@
 <body>
   <section class="contacto">
     <h1>Formulario de Contacto</h1>
-    <form action="http://localhost:3000/guardar" method="POST" class="formulario">
+    <!-- Formulario configurado para Netlify -->
+    <form name="contacto" method="POST" data-netlify="true" class="formulario">
       
       <div class="campo">
         <label for="nombre">Nombre</label>
@@ -32,6 +33,7 @@
   </section>
 </body>
 </html>
+
 
 <style>
   /* Fondo general */
